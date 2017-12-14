@@ -1,0 +1,3 @@
+void factors(int i);
+
+
