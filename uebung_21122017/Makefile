@@ -1,8 +1,14 @@
-primfactors: primfactors.c
-	gcc -o primfactors primfactors.c
+TARGETS: primefactors factors 
+
+all: $(TARGETS)
+
+
+primefactors: primefactors.c
+	gcc primefactors.c -o primefactors
 
 factors: factors.c
-	gcc -o factors factors.c
+	gcc factors.c -o factors
 
-factorial_factors: factorial_factors
-	gcc -o factorial_factors factorial_factors.c
+clear:
+	rm -f *.exe
+	rm -f *.o
