@@ -10,6 +10,6 @@ primefactors: primefactors.c
 factors: factors.c
 	gcc factors.c -o factors
 
-clear:
+clean:
 	rm -f *.exe
 	rm -f *.o
