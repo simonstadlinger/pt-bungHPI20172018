@@ -12,4 +12,5 @@ factors: factors.c
 
 clear:
 	rm -f *.exe
-	rm -f *.o
+	rm -f *.o $(TARGETS)
+	rm -f *.out
