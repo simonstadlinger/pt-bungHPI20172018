@@ -1,0 +1,52 @@
+Aufgabe 2:
+
+a) (int) 3.142
+	int: type-name
+	type-name: specifier-qualifier-list
+	specifier-qualifier-list: type specifier
+	type-specifier: int
+
+	3.142: cast-expression
+	cast-expression: unary-expresssion
+	unary-expression: postfix-expression
+	postfix-expression: primary-expression
+	primary-expression: constant
+	constant: floating constant
+	floating constant: decimal floating constant
+	decimal floating constant: fractional constant
+	fractional constant: digit-sequence.digit-sequence
+	digit-sequence.digit-sequence: digit.digit-sequence
+	digit.digit-sequence: 3.digit-sequenze
+	digit-sequence:digit digit-sequence
+	digit digit-sequence: 1 digit-sequence
+	digit-sequence: digit digit-sequence
+	digit digit-sequence: 4 digit-sequence
+	digit-sequence: digit digit-sequence
+	digit: 2 
+
+(int) 3.142 = 3
+
+b) e = 2. + .718
+	assignment-expression: unary-expression assignment-operator assignment-expression
+	unary-expression: .... digit: .... nondigit: e
+	assignment-operator: =
+	assignment-expression: unary-expression assignment-operator assignment-expression
+	unary-expression: .... floating-constant:.... 2.
+	assignment-operator: +
+	assignment expression: conditional-expression:
+	conditional-expression: .... .... .... cast-expression: unary-expression: ... floating-constant: ..... .718
+
+Das Ergebnis dieser Expression hängt vom Datentyp von e ab. 
+float e = 2.18
+int e = 2 
+
+c) a = 0, a+=e
+	argument-expression-list: argument-expression-list, assignment-expression
+	argument-expression-list: assignment-expression
+	assignment expression: siehe oben:....... a = 0
+	assignment expression: siehe oben:....... a+=e
+
+Das Ergebnis dieser Expression hängt vom Datentyp von a und e ab. 
+int a = 2
+float a, e = 2.718 
+float a, int e = 2.
