@@ -1,8 +1,9 @@
-TARGETS: primefactors factors 
+TARGETS= factorial_factors primefactors factors 
 
 all: $(TARGETS)
 
-
+factorial_factors: factorial_factors.c
+	gcc factorial_factors.c -o factorial_factors
 primefactors: primefactors.c
 	gcc primefactors.c -o primefactors
 
