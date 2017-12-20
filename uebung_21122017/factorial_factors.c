@@ -1,24 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-
-
-int fac(int i){
-	int faculty=1;
-	int j = 1;	
-	for(;j<=i;j++){
-		faculty = faculty*j;
+long long primfak(long long z){
+	for (int i= 2; i<=z; i++){
+		while (z>1 && z%i==0) {
+			printf("%d\n",i);
+			z = z/i;
+		}
 	}
-	return faculty;
+return 0;
+
+}
+
+long long fak(int a){
+	long long j=1;
+	for (int k=1; k <= a; k++){
+		j = j*k;
+		}
+return j;
 }
 
 
+int main(int argc, const char * argv[]) {
 
-int main(int argc, char * argv[]){
-	int zahl = atoi(argv[1]);
-	printf("%d\n", zahl);
-	printf("%d\n", fac(zahl));
-	return 0;
+//printf("Die Primfaktorzerlegung von %d! ist:\n", atoi(argv[1])
+long long a = fak(atoi(argv[1]));
+primfak(a);
+return 0;
 
 }
