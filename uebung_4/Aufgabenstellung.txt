@@ -1,0 +1,19 @@
+Serie 4: In den Poolräumen am 11.01.2018 (Abgabe: 18.01.2018, 21:00 Uhr, 20 Punkte)
+
+Schreiben Sie in Anlehnung an das Programm reverse.c aus Unit 7 ein Programm cap_rev.c, das jedes seiner Kommandozeilenargumente in umgekehrter Reihenfolge, pro Zeile, ausgibt. Zusätzlich sollen in jedem Argument alle Kleinbuchstaben durch Großbuchstaben ersetzt werden (andere Zeichen bleiben unverändert). Zum Beispiel:
+	$ ./cap_rev Guten Tag
+	GAT
+	NETUG
+
+Schreiben Sie ein Programm is_palindrome.c, dass für jedes seiner Kommandozeilenargumente prüft, ob es sich um ein Palindrom handelt. Es soll zeilenweise YES oder NO ausgegeben werden.
+
+Schreiben Sie ein Programm sundarams_sieve.c, das mithilfe des Siebs von Sundaram zeilenweise alle Primzahlen kleiner als eine per Kommandozeilenargument übergegeben Obergrenze G ausgibt. Sie können annehmen, dass ihr Programm nicht mit G größer als 1000 gerufen wird. 
+Hinweis: Berechnen Sie zuerst für welche Maximalwerte der Zählvariablen ihre Zugriffe noch in den Grenzen des Feldes liegen, um daraus die Abbruchbedingunngen der Schleifen zu schließen.
+
+Schreiben Sie ein Programm wc.c, das Zeilen, Worte und Zeichen der Standardeingabe zählt und mit Leerzeichen getrennnt ausgibt. Verwenden Sie die Funktion getchar() zum zeichenweisen Einlesen der Standardeingabe. Beachten Sie, dass zwei Wörter durch mehrere Whitespaces getrennnt sein können.
+Analysieren Sie Ihr wc.c Programm mit Hilfe von lint (splint). Entwickeln Sie Ihr Programm solange weiter, bis lint keine Warnungen mehr ausgibt. (Natürlich sollen Sie lint immer verwenden, im Rahmen dieser Aufgabe werden wir aber nur überprüfen, ob Ihr wc.c-Programm keine Warnungen produziert.)
+
+Das Programm strlen_utf8.c soll die UTF-8 Symbole in einem übergeben String zählen. Leider arbeitet es fehlerhaft. Nutzen Sie /usr/bin/script um aufzeichnen, wie Sie in GDB nach der Fehlerstelle suchen. Geben Sie die Aufzeichnung als gdb_session.log, sowie den korrigierten Programmquelltext ab. 
+Hinweis: Nutzen Sie die Poolrechner, sollten Sie auf Ihrem System Probleme mit script haben.
+
+Reichen Sie Ihre Lösung als tar-Archiv ein, das neben Ihrem Quelltext und gdb_session.log ein Makefile mit den Zielen all und clean enthält. Binärdateien und Backupdateien Ihres Editors sollen nicht enthalten sein.
