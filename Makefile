@@ -1,14 +1,14 @@
 TARGETS= factorial_factors primefactors factors 
-
+CFLAGS= -std=gnu99
 all: $(TARGETS)
 
 factorial_factors: factorial_factors.c
-	gcc factorial_factors.c -o factorial_factors
+	gcc $(CFLAGS) factorial_factors.c -o factorial_factors
 primefactors: primefactors.c
-	gcc primefactors.c -o primefactors
+	gcc $(CFLAGS) primefactors.c -o primefactors
 
 factors: factors.c
-	gcc factors.c -o factors
+	gcc $(CFLAGS) factors.c -o factors
 
 clean:
 	rm -f *.exe
