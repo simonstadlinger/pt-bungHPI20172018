@@ -1,5 +1,5 @@
-/* AP 5-sep-12	reverse.c				*/
-/*		Reihenfolge einer Zeichenkette umkehren	*/
+/* cap_rev.c
+* reverse string in place, change letters to uppercase*/
 
 # include <string.h>
 # include <stdio.h>
