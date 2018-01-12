@@ -6,14 +6,18 @@ int main(){
 	int word_count=0;
 	int char_count=0;
 	int line_count=0;
+	int ifWord=0;
 	while((c = getchar()) != EOF ){
 		char_count++;
 		switch(c){
-			case '\n': line_count++;word_count++;
-				break;
+			case '\n': line_count++;
 			case ' ':
-			case '\t':
-				 
+			case '\t': ifWord = 1;
+			default:
+				if(ifWord == 1){
+					ifWord=0;
+					word_count++;
+				}		
 		}
 	}
 	printf("counted words: %d\n", word_count);
