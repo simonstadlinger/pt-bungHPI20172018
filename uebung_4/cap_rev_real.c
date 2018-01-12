@@ -1,3 +1,11 @@
+<<<<<<< HEAD:uebung_4/cap_rev.c
+/*argv* cap_rev.c
+* reverse string in place, change letters to uppercase*/
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <ctype.h>
+=======
 <<<<<<< HEAD
 /* AP 5-sep-12	reverse.c				*/
 /*		Reihenfolge einer Zeichenkette umkehren	*/
@@ -8,6 +16,7 @@
 
 # include <string.h>
 # include <stdio.h>
+>>>>>>> 7bcdd8293a2cf0924564fa486b34d767f209f806:uebung_4/reverse.c
 
 /* reverse a string in place */
 void reverse( char s[] ) {
@@ -25,7 +34,17 @@ void uppercase(char s[]) {
             s[i] = s[i] -32; }
     }
 }
+<<<<<<< HEAD:uebung_4/cap_rev.c
+
+void our_toupper(char s[] ){
+    for (int i = 0; s[i] != '\0'; i++){
+        s[i]= toupper(s[i]);
+     }
+ }
+
+=======
 >>>>>>> 95a34e1ad6d6e11304b16ecf5ddb6fa7362d3144
+>>>>>>> 7bcdd8293a2cf0924564fa486b34d767f209f806:uebung_4/reverse.c
 int main( int argc, char * argv [] ) {
 	char * prog = argv[0];
 	int i = 0;
@@ -48,8 +67,9 @@ int main( int argc, char * argv [] ) {
 =======
 	for (i = argc-1; i>0; i--) {
 		reverse( argv[ i ] );
-        uppercase( argv[ i ] );
-		printf("%s \n", argv[ i ] );
+       // uppercase( argv[ i ] );
+        our_toupper( argv[i]);
+        printf("%s \n", argv[ i ] );
 	}
 	return 0;
 }

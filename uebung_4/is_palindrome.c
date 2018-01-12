@@ -5,8 +5,8 @@
 # include <stdio.h>
 
 /* reverse a string in place */
-int is_palindrome( char s[] ) {
-	int c, i, j;
+int static is_palindrome( char s[] ) {
+	int i, j;
 	for (i = 0, j = strlen(s)-1; i < j; i++, j--) {
 		if (s[i] != s[j])
             return 0;
