@@ -1,6 +1,11 @@
-TARGETS= cap_rev is_palindrom sundarams_sieve wc
+TARGETS= cap_rev is_palindrome sundarams_sieve wc strlen_uft8
 
-all=$(TARGETS)
+all:$(TARGETS)
+
+$(TARGETS): %: %.c
+	$(CC) $< -o $@
+
+
 
 clean: 
 	rm -f $(TARGETS)
