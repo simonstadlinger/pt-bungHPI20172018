@@ -24,9 +24,9 @@ int main( int argc, char * argv [] ) {
 	}
 	for (i = 1; i < argc; i++) {
 	    if (is_palindrome(argv[i]) == 1)
-            printf("YES \n");
+            printf("YES\n");
         else
-            printf("NO \n");
+            printf("NO\n");
     }
 	return 0;
 }
