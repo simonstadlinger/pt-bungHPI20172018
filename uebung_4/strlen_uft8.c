@@ -33,8 +33,8 @@ static size_t strlen_utf8(const char *s)
 		if (is_escape_byte != 0) {
 			num_bytes_in_symbol = count_leading_ones(current_symbol);
 			s += num_bytes_in_symbol;
-		}
-		s++;
+		}else 
+		    s++;
 		len++;
 	}
 	return len;
