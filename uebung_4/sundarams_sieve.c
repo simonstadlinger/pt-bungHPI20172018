@@ -19,7 +19,7 @@ void sieb(int array_grenze){
     
     for (int i = 1; i<= array_grenze; i++){
         if (kandidaten[i]==1)
-            printf("%d \n", 2*i +1 );
+            printf("%d\n", 2*i +1 );
     }
  }
     
@@ -28,7 +28,7 @@ int main (int argc, char * argv[]) {
     int obergrenze = atoi(argv[1]);
     int array_grenze = (obergrenze - 2)/2;
     if (obergrenze > 1)
-        printf("%d \n", 2);
+        printf("%d\n", 2);
     sieb(array_grenze);
     return 0;
 }
