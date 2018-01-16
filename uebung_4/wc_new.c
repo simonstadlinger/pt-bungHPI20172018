@@ -1,6 +1,5 @@
 #include <string.h>
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(){
 
@@ -9,7 +8,7 @@ int main(){
     int was_space =1;
 
     while ((c=getchar()) != EOF) {
-        if (c> 32 && was_space==1){
+        if (c> (int)' ' && was_space==1){
             woerter ++;
             zeichen ++;
             }
@@ -19,8 +18,8 @@ int main(){
             }           
         else
             zeichen ++;
-        was_space = (int)(c<33);
+        was_space = (int)(c <= (int)' ');
             }
     printf(" %d %d %d" ,zeilen, woerter, zeichen);
-    return EXIT_SUCCESS;
+    return 0;
 }
