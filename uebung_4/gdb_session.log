@@ -1,0 +1,100 @@
+Script started on 2018. jan. 16., kedd, 10:35:55 CET
+]0;simonstadlinger@redmamba: ~/MEGA/Wintersemester 1718/Programmiertechnik 1/Übungen/pt-bungHPI20172018/uebung_4[01;32msimonstadlinger@redmamba[00m:[01;34m~/MEGA/Wintersemester 1718/Programmiertechnik 1/Übungen/pt-bungHPI20172018/uebung_4[00m$ gdb stre[Klen_uft8
+GNU gdb (Ubuntu 7.11.1-0ubuntu1~16.5) 7.11.1
+Copyright (C) 2016 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from strlen_uft8...done.
+(gdb)  [Ksta 'hall[K[K[Källo*[K'
+Temporary breakpoint 1 at 0x4006aa: file strlen_uft8.c, line 46.
+Starting program: /home/simonstadlinger/MEGA/Wintersemester 1718/Programmiertechnik 1/Übungen/pt-bungHPI20172018/uebung_4/strlen_uft8 'hällo'
+
+Temporary breakpoint 1, main (argc=2, argv=0x7fffffffdce8) at strlen_uft8.c:46
+46		if (argc < 2) {
+(gdb) n
+51		for (i = 1; i < argc; i++) {
+(gdb) n
+52			char *s = argv[i];
+(gdb) n
+53			printf("strlen     (\"%s\") = %zu\n", s, strlen(s));
+(gdb) n
+strlen     ("hällo") = 6
+54			printf("strlen_utf8(\"%s\") = %zu\n", s, strlen_utf8(s));
+(gdb) s
+strlen_utf8 (s=0x7fffffffe11f "hällo") at strlen_uft8.c:23
+23		size_t len = 0;
+(gdb) len[K[K[Kdisp len 0[K=0[K[K[K
+1: len = 140737354129768
+(gdb) n
+27		while (*s != '\0') {
+1: len = 0
+(gdb) n
+28			char current_symbol = *s;
+1: len = 0
+(gdb) disp s
+2: s = 0x7fffffffe11f "hällo"
+(gdb) n
+31			is_escape_byte = current_symbol & 0x80;
+1: len = 0
+2: s = 0x7fffffffe11f "hällo"
+(gdb) n
+33			if (is_escape_byte != 0) {
+1: len = 0
+2: s = 0x7fffffffe11f "hällo"
+(gdb) n
+37			s++;
+1: len = 0
+2: s = 0x7fffffffe11f "hällo"
+(gdb) n
+38			len++;
+1: len = 0
+2: s = 0x7fffffffe120 "ällo"
+(gdb) n
+27		while (*s != '\0') {
+1: len = 1
+2: s = 0x7fffffffe120 "ällo"
+(gdb) n
+28			char current_symbol = *s;
+1: len = 1
+2: s = 0x7fffffffe120 "ällo"
+(gdb) n
+31			is_escape_byte = current_symbol & 0x80;
+1: len = 1
+2: s = 0x7fffffffe120 "ällo"
+(gdb) n
+33			if (is_escape_byte != 0) {
+1: len = 1
+2: s = 0x7fffffffe120 "ällo"
+(gdb) n
+34				num_bytes_in_symbol = count_leading_ones(current_symbol);
+1: len = 1
+2: s = 0x7fffffffe120 "ällo"
+(gdb) n
+35				s += num_bytes_in_symbol;
+1: len = 1
+2: s = 0x7fffffffe120 "ällo"
+(gdb) n
+37			s++;
+1: len = 1
+2: s = 0x7fffffffe122 "llo"
+(gdb) n
+38			len++;
+1: len = 1
+2: s = 0x7fffffffe123 "lo"
+(gdb) q
+A debugging session is active.
+
+	Inferior 1 [process 11248] will be killed.
+
+
+Script done on 2018. jan. 16., kedd, 10:53:54 CET
