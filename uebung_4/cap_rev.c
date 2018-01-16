@@ -1,4 +1,4 @@
-#include <stdlib.h>
+# include <stdlib.h>
 # include <string.h>
 # include <stdio.h>
 
@@ -8,13 +8,6 @@ void reverse( char s[] ) {
 	for (i = 0, j = strlen(s)-1; i < j; i++, j--) {
 		c = s[i]; s[i] = s[j]; s[j] = c;
 	}
-}
-
-void uppercase(char s[]) {
-    for (int i=0; s[i]!='\0'; i++) {
-        if (s[i]>='a' && s[i]<='z'){
-            s[i] = s[i] -32; }
-    }
 }
 
 void our_toupper(char s[] ){
@@ -33,9 +26,8 @@ int main( int argc, char * argv [] ) {
 	}
 	for (i = argc-1; i>0; i--) {
 	reverse( argv[ i ] );
-       // uppercase( argv[ i ] );
-        our_toupper( argv[i]);
-        printf("%s \n", argv[ i ] );
+        our_toupper(argv[i]);
+        printf("%s\n",argv[ i ]);
 	}
 	return 0;
 }
